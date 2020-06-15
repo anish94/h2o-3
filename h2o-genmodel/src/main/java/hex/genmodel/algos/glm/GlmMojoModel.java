@@ -94,7 +94,7 @@ public class GlmMojoModel extends GlmMojoModelBase {
     return _beta[_beta.length - 1];
   }
 
-  private interface Function1 extends Serializable {
+  public interface Function1 extends Serializable {
     double eval(double x);
   }
 

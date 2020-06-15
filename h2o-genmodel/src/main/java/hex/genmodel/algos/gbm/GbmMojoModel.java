@@ -111,7 +111,7 @@ public final class GbmMojoModel extends SharedTreeMojoModelWithContributions imp
     }
     
     @Override
-    public double[] score0(double[] row, double[] preds) {
+    public void score0(double[] row, double[] preds) {
         return score0(row, 0.0, preds);
     }
 
