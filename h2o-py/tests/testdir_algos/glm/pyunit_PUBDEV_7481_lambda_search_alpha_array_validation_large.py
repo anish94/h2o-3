@@ -34,8 +34,8 @@ def glm_alpha_lambda_arrays():
         cs = rVal['coefficients'][l]
         cs_norm = rVal['coefficients_std'][l]
         print("Comparing submodel index {0}".format(l))
-        pyunit_utils.assertEqualCoeffDicts(cs, m.coef(), tol=1e-3)
-        pyunit_utils.assertEqualCoeffDicts(cs_norm, m.coef_norm(), tol=1e-3)
+        pyunit_utils.assertEqualCoeffDicts(cs, m.coef(), tol=1e-2)
+        pyunit_utils.assertEqualCoeffDicts(cs_norm, m.coef_norm(), tol=1e-2)
         pyunit_utils.assertEqualRegPaths(regKeys, rVal, l, mr, tol=1e-3)
         dVal = 1-p.residual_deviance()/p.null_deviance()
         if l == best_submodel_indexVal: # check training metrics, should equal for best submodel index

@@ -26,7 +26,7 @@ def glm_alpha_array_lambda_null():
         mr = glm.getGLMRegularizationPath(m)
         cs = r['coefficients'][l]
         cs_norm = r['coefficients_std'][l]
-        pyunit_utils.assertCoefEqual(cs, m.coef(),coefClassSet, coefClassSet)
+        pyunit_utils.assertCoefEqual(cs, m.coef(),coefClassSet)
         pyunit_utils.assertCoefEqual(cs_norm, m.coef_norm(), coefClassSetNorm)
         devm = 1-m.residual_deviance()/m.null_deviance()
         devn = r['explained_deviance_train'][l]
